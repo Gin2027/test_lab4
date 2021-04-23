@@ -37,11 +37,10 @@ pipeline {
 //                 input "Does the staging environment look ok?"
 //             }
 //         }
+
         stage('Deliver') {
             steps {
                 sh 'su'
-            }
-            steps {
                 sh './jenkins/scripts/deliver.sh'
             }
         }
