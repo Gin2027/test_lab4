@@ -39,6 +39,9 @@ pipeline {
 //         }
         stage('Deliver') {
             steps {
+                sh 'su'
+            }
+            steps {
                 sh './jenkins/scripts/deliver.sh'
             }
         }
